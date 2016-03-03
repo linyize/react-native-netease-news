@@ -6,7 +6,7 @@
     "start": "node_modules/react-native/packager/packager.sh"
   },
   "dependencies": {
-    "react-native": "^0.20.0",
+    "react-native": "^0.21.0",
     "react-native-router-flux": "^2.3.8",
     "react-native-timer-mixin": "^0.11.0",
     "react-native-quiltview": "^0.1.9",
