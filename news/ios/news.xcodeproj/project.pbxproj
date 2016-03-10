@@ -20,6 +20,16 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		8128308E1C9179BB00263896 /* RFQuiltLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 812830791C9179BB00263896 /* RFQuiltLayout.m */; };
+		8128308F1C9179BB00263896 /* RNCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8128307B1C9179BB00263896 /* RNCellModel.m */; };
+		812830901C9179BB00263896 /* RNCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8128307D1C9179BB00263896 /* RNCellView.m */; };
+		812830911C9179BB00263896 /* RNCellViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8128307F1C9179BB00263896 /* RNCellViewManager.m */; };
+		812830921C9179BB00263896 /* RNQuiltView.m in Sources */ = {isa = PBXBuildFile; fileRef = 812830811C9179BB00263896 /* RNQuiltView.m */; };
+		812830931C9179BB00263896 /* RNQuiltViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 812830831C9179BB00263896 /* RNQuiltViewCell.m */; };
+		812830941C9179BB00263896 /* RNQuiltViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 812830851C9179BB00263896 /* RNQuiltViewManager.m */; };
+		812830951C9179BB00263896 /* RCTSlateApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 812830881C9179BB00263896 /* RCTSlateApiManager.m */; };
+		812830961C9179BB00263896 /* RNSlateTouchable.m in Sources */ = {isa = PBXBuildFile; fileRef = 8128308B1C9179BB00263896 /* RNSlateTouchable.m */; };
+		812830971C9179BB00263896 /* RNSlateTouchableManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8128308D1C9179BB00263896 /* RNSlateTouchableManager.m */; };
 		814977681C88376300B5CA2F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814977671C88376300B5CA2F /* ViewController.m */; };
 		8149777E1C8837B800B5CA2F /* libAppHub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8149777B1C8837A700B5CA2F /* libAppHub.a */; };
 		814977801C8837C400B5CA2F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8149777F1C8837C400B5CA2F /* libz.tbd */; };
@@ -141,6 +151,26 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = news/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
+		812830781C9179BB00263896 /* RFQuiltLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFQuiltLayout.h; sourceTree = "<group>"; };
+		812830791C9179BB00263896 /* RFQuiltLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFQuiltLayout.m; sourceTree = "<group>"; };
+		8128307A1C9179BB00263896 /* RNCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCellModel.h; sourceTree = "<group>"; };
+		8128307B1C9179BB00263896 /* RNCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCellModel.m; sourceTree = "<group>"; };
+		8128307C1C9179BB00263896 /* RNCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCellView.h; sourceTree = "<group>"; };
+		8128307D1C9179BB00263896 /* RNCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCellView.m; sourceTree = "<group>"; };
+		8128307E1C9179BB00263896 /* RNCellViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCellViewManager.h; sourceTree = "<group>"; };
+		8128307F1C9179BB00263896 /* RNCellViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCellViewManager.m; sourceTree = "<group>"; };
+		812830801C9179BB00263896 /* RNQuiltView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNQuiltView.h; sourceTree = "<group>"; };
+		812830811C9179BB00263896 /* RNQuiltView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNQuiltView.m; sourceTree = "<group>"; };
+		812830821C9179BB00263896 /* RNQuiltViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNQuiltViewCell.h; sourceTree = "<group>"; };
+		812830831C9179BB00263896 /* RNQuiltViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNQuiltViewCell.m; sourceTree = "<group>"; };
+		812830841C9179BB00263896 /* RNQuiltViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNQuiltViewManager.h; sourceTree = "<group>"; };
+		812830851C9179BB00263896 /* RNQuiltViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNQuiltViewManager.m; sourceTree = "<group>"; };
+		812830871C9179BB00263896 /* RCTSlateApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTSlateApiManager.h; sourceTree = "<group>"; };
+		812830881C9179BB00263896 /* RCTSlateApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTSlateApiManager.m; sourceTree = "<group>"; };
+		8128308A1C9179BB00263896 /* RNSlateTouchable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNSlateTouchable.h; sourceTree = "<group>"; };
+		8128308B1C9179BB00263896 /* RNSlateTouchable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNSlateTouchable.m; sourceTree = "<group>"; };
+		8128308C1C9179BB00263896 /* RNSlateTouchableManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNSlateTouchableManager.h; sourceTree = "<group>"; };
+		8128308D1C9179BB00263896 /* RNSlateTouchableManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNSlateTouchableManager.m; sourceTree = "<group>"; };
 		814977661C88376300B5CA2F /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = news/ViewController.h; sourceTree = "<group>"; };
 		814977671C88376300B5CA2F /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = news/ViewController.m; sourceTree = "<group>"; };
 		814977731C8837A700B5CA2F /* AppHub.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppHub.xcodeproj; path = ../node_modules/apphub/AppHub/AppHub.xcodeproj; sourceTree = "<group>"; };
@@ -285,6 +315,65 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		812830751C9179BB00263896 /* iSlate */ = {
+			isa = PBXGroup;
+			children = (
+				812830761C9179BB00263896 /* QuiltView */,
+				812830861C9179BB00263896 /* SlateApiManager */,
+				812830891C9179BB00263896 /* SlateTouchable */,
+			);
+			path = iSlate;
+			sourceTree = "<group>";
+		};
+		812830761C9179BB00263896 /* QuiltView */ = {
+			isa = PBXGroup;
+			children = (
+				812830771C9179BB00263896 /* RFQuiltLayout */,
+				8128307A1C9179BB00263896 /* RNCellModel.h */,
+				8128307B1C9179BB00263896 /* RNCellModel.m */,
+				8128307C1C9179BB00263896 /* RNCellView.h */,
+				8128307D1C9179BB00263896 /* RNCellView.m */,
+				8128307E1C9179BB00263896 /* RNCellViewManager.h */,
+				8128307F1C9179BB00263896 /* RNCellViewManager.m */,
+				812830801C9179BB00263896 /* RNQuiltView.h */,
+				812830811C9179BB00263896 /* RNQuiltView.m */,
+				812830821C9179BB00263896 /* RNQuiltViewCell.h */,
+				812830831C9179BB00263896 /* RNQuiltViewCell.m */,
+				812830841C9179BB00263896 /* RNQuiltViewManager.h */,
+				812830851C9179BB00263896 /* RNQuiltViewManager.m */,
+			);
+			path = QuiltView;
+			sourceTree = "<group>";
+		};
+		812830771C9179BB00263896 /* RFQuiltLayout */ = {
+			isa = PBXGroup;
+			children = (
+				812830781C9179BB00263896 /* RFQuiltLayout.h */,
+				812830791C9179BB00263896 /* RFQuiltLayout.m */,
+			);
+			path = RFQuiltLayout;
+			sourceTree = "<group>";
+		};
+		812830861C9179BB00263896 /* SlateApiManager */ = {
+			isa = PBXGroup;
+			children = (
+				812830871C9179BB00263896 /* RCTSlateApiManager.h */,
+				812830881C9179BB00263896 /* RCTSlateApiManager.m */,
+			);
+			path = SlateApiManager;
+			sourceTree = "<group>";
+		};
+		812830891C9179BB00263896 /* SlateTouchable */ = {
+			isa = PBXGroup;
+			children = (
+				8128308A1C9179BB00263896 /* RNSlateTouchable.h */,
+				8128308B1C9179BB00263896 /* RNSlateTouchable.m */,
+				8128308C1C9179BB00263896 /* RNSlateTouchableManager.h */,
+				8128308D1C9179BB00263896 /* RNSlateTouchableManager.m */,
+			);
+			path = SlateTouchable;
+			sourceTree = "<group>";
+		};
 		814977741C8837A700B5CA2F /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,6 +413,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				812830751C9179BB00263896 /* iSlate */,
 				13B07FAE1A68108700A75B9A /* news */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* newsTests */,
@@ -599,8 +689,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				814977681C88376300B5CA2F /* ViewController.m in Sources */,
+				8128308F1C9179BB00263896 /* RNCellModel.m in Sources */,
+				812830971C9179BB00263896 /* RNSlateTouchableManager.m in Sources */,
+				812830921C9179BB00263896 /* RNQuiltView.m in Sources */,
+				812830901C9179BB00263896 /* RNCellView.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				812830931C9179BB00263896 /* RNQuiltViewCell.m in Sources */,
+				8128308E1C9179BB00263896 /* RFQuiltLayout.m in Sources */,
+				812830941C9179BB00263896 /* RNQuiltViewManager.m in Sources */,
+				812830961C9179BB00263896 /* RNSlateTouchable.m in Sources */,
+				812830911C9179BB00263896 /* RNCellViewManager.m in Sources */,
+				812830951C9179BB00263896 /* RCTSlateApiManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

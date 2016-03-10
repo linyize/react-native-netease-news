@@ -4,22 +4,21 @@ var React = require('react-native');
 var { Text, View, Image, StyleSheet, TouchableOpacity } = React;
 var { Actions } = require('react-native-router-flux');
 
-var Column = require('../choice/Column');
-
-var News = React.createClass({
+var Messages = React.createClass({
     render(){
-        return <Column style={styles.container}>
-            </Column>;
+        return <View style={styles.container}>
+        			<Text>我的消息</Text>
+        			</View>;
     }
 });
 
 var styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'row',
+    flexDirection: 'column',
     backgroundColor: 'lightgray',
     marginTop: 64
   }
 });
 
-module.exports = News;
+module.exports = Messages;

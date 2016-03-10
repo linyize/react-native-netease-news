@@ -4,14 +4,14 @@ var React = require('react-native');
 var { Text, View, Image, StyleSheet, TouchableOpacity } = React;
 var { Actions } = require('react-native-router-flux');
 
-var Me = React.createClass({
+var Comments = React.createClass({
     render(){
         return <View style={styles.container}>
-        			<Text>我</Text>
-        			<Text></Text>
-        			<TouchableOpacity onPress={Actions.messages}>
-        			<Text>我的消息</Text>
-        			</TouchableOpacity>
+        			<Text>评论页</Text>
+                    <Text></Text>
+                    <TouchableOpacity onPress={Actions.writecomment}>
+                    <Text>写评论</Text>
+                    </TouchableOpacity>
         			</View>;
     }
 });
@@ -21,8 +21,8 @@ var styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     backgroundColor: 'lightgray',
-    marginTop: 20
+    marginTop: 64
   }
 });
 
-module.exports = Me;
+module.exports = Comments;

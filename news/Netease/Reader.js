@@ -3,10 +3,11 @@
 var React = require('react-native');
 var { Text, View, Image, StyleSheet } = React;
 
+var Column = require('../choice/Column');
 
 var Reader = React.createClass({
     render(){
-        return <View style={styles.container}><Text> 阅读</Text></View>;
+        return <Column style={styles.container}></Column>;
     }
 });
 
