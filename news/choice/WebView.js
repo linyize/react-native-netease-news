@@ -66,6 +66,22 @@ var WebViewExample = React.createClass({
 
     return (
       <View style={[styles.container]}>
+        <WebView
+          ref={WEBVIEW_REF}
+          automaticallyAdjustContentInsets={false}
+          style={styles.webView}
+          source={{uri: this.state.url}}
+          javaScriptEnabled={true}
+          onNavigationStateChange={this.onNavigationStateChange}
+          onShouldStartLoadWithRequest={this.onShouldStartLoadWithRequest}
+          startInLoadingState={true}
+          scalesPageToFit={this.state.scalesPageToFit}
+        />
+      </View>
+    );
+/*
+    return (
+      <View style={[styles.container]}>
         <View style={[styles.addressBarRow]}>
           <TouchableOpacity
             onPress={this.goBack}
@@ -114,6 +130,7 @@ var WebViewExample = React.createClass({
         </View>
       </View>
     );
+*/
   },
 
   goBack: function() {

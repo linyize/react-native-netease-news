@@ -16,7 +16,7 @@ var SlateURIHandler = {
     var title = params.slice(1, i);
     var url = params.slice(i+1, params.length);
 
-    Actions.news({url, name:title});
+    Actions.article({url, name:title});
   }
 };
 

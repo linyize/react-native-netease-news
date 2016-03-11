@@ -4,15 +4,12 @@ var React = require('react-native');
 var { Text, View, Image, StyleSheet, TouchableOpacity } = React;
 var { Actions } = require('react-native-router-flux');
 
+var WebView = require('../choice/WebView');
+
 var Article = React.createClass({
     render(){
-        return <View style={styles.container}>
-        			<Text>文章页</Text>
-                    <Text></Text>
-                    <TouchableOpacity onPress={Actions.comments}>
-                    <Text>评论页</Text>
-                    </TouchableOpacity>
-        			</View>;
+        return <WebView style={styles.container} url={this.props.url} title={this.props.title}>
+        			</WebView>;
     }
 });
 
