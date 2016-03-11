@@ -23,7 +23,6 @@ RCT_EXPORT_VIEW_PROPERTY(enableDoubleTap, BOOL)
 - (NSArray *)customDirectEventTypes
 {
     return @[
-             @"onSizeChange",
              @"onTap",
              @"onDoubleTap"
              ];

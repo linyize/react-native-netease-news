@@ -33,8 +33,6 @@
         _tap.numberOfTapsRequired = 1;
         _tap.numberOfTouchesRequired = 1;
         [self addGestureRecognizer:_tap];
-        
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateBlockPixels) name:@"UpdateBlockPixels" object:nil];
     }
     return self;
 }
@@ -45,8 +43,6 @@
     if (_doubleTap) {
         [self removeGestureRecognizer:_doubleTap];
     }
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)setEnableDoubleTap:(BOOL)enableDoubleTap
@@ -63,13 +59,6 @@
     }
 }
 
-- (void)updateBlockPixels
-{
-    if (self.superview) {
-        [self setFrame:self.superview.bounds];
-    }
-}
-
 - (void)tap:(id)sender
 {
     // 发送事件给js
@@ -82,26 +71,6 @@
     // 发送事件给js
     [_eventDispatcher sendInputEventWithName:@"doubleTap"
                                         body:@{@"target":self.reactTag}];
-}
-
-- (void)setFrame:(CGRect)frame
-{
-    CGRect oldFrame = self.frame;
-    
-    [super setFrame:frame];
-    
-    if (oldFrame.size.width == frame.size.width) {
-        return;
-    }
-    
-    // 发送事件给js
-    [_eventDispatcher sendInputEventWithName:@"sizeChange"
-                                        body:@{@"target":self.reactTag,
-                                               @"size":@{
-                                                       @"width":@(frame.size.width),
-                                                       @"height" : @(frame.size.height)
-                                                       }
-                                               }];
 }
 
 RCT_NOT_IMPLEMENTED(-initWithFrame:(CGRect)frame)
