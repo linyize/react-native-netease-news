@@ -48,6 +48,11 @@
                                                object:nil];
 }
 
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskAll;
+}
+
 #pragma mark - RCTBridgeDelegate
 
 - (NSURL *)sourceURLForBridge:(__unused RCTBridge *)bridge
