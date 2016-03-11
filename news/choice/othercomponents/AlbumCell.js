@@ -8,7 +8,11 @@ var AlbumCell = React.createClass({
     mixins: [BasicComponentMixin],
 
     componentWillMount() {
-        this.loadLayout();
+        this.loadLayout(this.props);
+    },
+
+    componentWillReceiveProps(nextProps) {
+        this.loadLayout(nextProps);
     },
 
     render() {

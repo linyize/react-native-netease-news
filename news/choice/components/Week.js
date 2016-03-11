@@ -28,7 +28,11 @@ var Week = React.createClass({
     },
 
     componentWillMount() {
-        this.loadLayout();
+        this.loadLayout(this.props);
+    },
+
+    componentWillReceiveProps(nextProps) {
+        this.loadLayout(nextProps);
     },
 
     render() {

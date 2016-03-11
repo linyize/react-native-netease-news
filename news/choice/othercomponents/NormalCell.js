@@ -9,7 +9,11 @@ var NormalCell = React.createClass({
     mixins: [FirstLevelComponentMixin],
 
     componentWillMount() {
-        this.loadLayout();
+        this.loadLayout(this.props);
+    },
+
+    componentWillReceiveProps(nextProps) {
+        this.loadLayout(nextProps);
     },
 
     getDefaultProps() {

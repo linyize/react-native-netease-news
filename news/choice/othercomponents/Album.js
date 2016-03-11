@@ -17,7 +17,11 @@ var Album = React.createClass({
     },
 
     componentWillMount() {
-        this.loadLayout();
+        this.loadLayout(this.props);
+    },
+
+    componentWillReceiveProps(nextProps) {
+        this.loadLayout(nextProps);
     },
 
     shouldComponentUpdate: function(nextProps, nextState) {

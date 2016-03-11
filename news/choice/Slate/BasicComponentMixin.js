@@ -13,15 +13,15 @@ var BasicComponentMixin = {
     mixins: [BasicMixin],
 
     // 加载布局数据
-    loadLayout() {
-        var layout = this.props.layout;
+    loadLayout(props: Object) {
+        var layout = props.layout;
         if (layout.dataSource) {
             if (!this.state.layout) {
                 this.loadDataSource(layout.dataSource);
             }
         }
         else {
-            this.setLayout(layout);
+            this.setLayout(layout, props);
         }
     },
 
@@ -47,18 +47,30 @@ var BasicComponentMixin = {
                 console.warn(error);
             }
             else {
-                this.setLayout(json);
+                this.setLayout(json, this.props);
             }
         });
     },
 
     // 把layout和其他props一起设置为组件state
-    setLayout(layout: Object) {
-        var typeMap = this.props.typeMap;
-        var mapping = this.props.mapping;
-        var width = this.props.width;
-        var height = this.props.height;
-        this.setState({layout, mapping, typeMap, width, height});
+    setLayout(layout: Object, props: Object) {
+        var newState = {};
+        if (layout) {
+            newState.layout = layout;
+        }
+        if (props.typeMap) {
+            newState.typeMap = props.typeMap;
+        }
+        if (props.mapping) {
+            newState.mapping = props.mapping;
+        }
+        if (props.width) {
+            newState.width = props.width;
+        }
+        if (props.height) {
+            newState.height = props.height;
+        }
+        this.setState(newState);
     }
 };
 
