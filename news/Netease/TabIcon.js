@@ -1,7 +1,7 @@
 'use strict';
 
 var React = require('react-native');
-var { Text, View, Image } = React;
+var { Text, View, Image, StyleSheet } = React;
 
 class TabIcon extends React.Component {
     render(){
@@ -27,12 +27,33 @@ class TabIcon extends React.Component {
                         : require('../image/tabbar_icon_me_normal.png');
         }
         return (
-            <View>
-            <Image source={icon}></Image>
+            <View style={styles.container}>
+            <View style={styles.iconContainer}>
+            <Image style={styles.icon} source={icon}></Image>
+            </View>
             <Text style={{color: this.props.selected ? 'red' :'black'}}>{this.props.title}</Text>
             </View>
         );
     }
 }
+
+var styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: 'column',
+    alignItems: 'center',
+    alignSelf: 'center'
+  },
+  iconContainer: {
+    height: 20,
+    marginTop: 5,
+    marginBottom: 3,
+    alignItems: 'center'
+  },
+  icon: {
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
+});
 
 module.exports = TabIcon;
