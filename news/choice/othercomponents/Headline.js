@@ -49,7 +49,7 @@ var Headline = React.createClass({
     _headlineStyles() {
         return {
             position: 'absolute',
-            backgroundColor: 'lightgray',
+            backgroundColor: '#F6F6F6',
             top: 0,
             left: 0,
             width: this.state.width,

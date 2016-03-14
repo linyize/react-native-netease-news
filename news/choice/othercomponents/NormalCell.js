@@ -43,7 +43,10 @@ var NormalCell = React.createClass({
                         <Image style={this._imageStyles()} source={{uri: image}} />
                         <View>
                             <Text style={this._titleStyles()}>{title}</Text>
-                            <Text style={styles.desc}>{subtitle}</Text>
+                            <Text style={styles.desc} numberOfLines={2}>{subtitle}</Text>
+                        </View>
+                        <View style={styles.rightBottom}>
+                            <Text style={styles.button}>专题</Text>
                         </View>
                     </SlateTouchable>;
         return React.cloneElement(container, {ref: 'NormalCell'}, [content]);
@@ -52,7 +55,7 @@ var NormalCell = React.createClass({
     _cellStyles() {
         return {
             position: 'absolute',
-            backgroundColor: 'lightgray',
+            backgroundColor: '#F6F6F6',
             top: 0,
             left: 0,
             width: this.state.width,
@@ -64,18 +67,19 @@ var NormalCell = React.createClass({
         var imageWidth = this.state.height - 24;
         return {
             textAlign: 'left',
-            color: '#333333',
+            color: 'black',
             marginTop: 10,
-            marginLeft: 12,
+            marginLeft: 8,
+            fontSize: 17,
             width: this.state.width - 4 - 12 - imageWidth - 12
         };
     },
 
     _imageStyles() {
-        var width = this.state.height - 24;
-        var height = width;
+        var width = this.state.height;
+        var height = width * 140 / 186;
         return {
-            marginLeft: 12,
+            marginLeft: 10,
             marginTop: 10,
             width: width,
             height: height,
@@ -90,9 +94,29 @@ var styles = StyleSheet.create({
   },
   desc: {
     textAlign: 'left',
-    color: '#333333',
-    marginLeft: 12,
+    color: '#A6A6A6',
+    marginTop: 6,
+    marginLeft: 8,
+    lineHeight: 22,
+    width: 260
   },
+  rightBottom: {
+    position: 'absolute',
+    right: 10,
+    bottom: 10,
+    width: 26,
+    alignItems: 'center',
+    height: 15,
+    borderColor: '#EB9394',
+    borderWidth: 0.5,
+    borderRadius: 3,
+    overflow: 'hidden'
+  },
+  button: {
+    color: '#DF3031',
+    marginTop: 1.5,
+    fontSize: 11
+  }
 });
 
 module.exports = NormalCell;

@@ -20,10 +20,11 @@ var MainMixin = {
 
     componentWillMount() {
 
-        var debug = false;
+        var debug = true;
         if (debug) {
             // 加载假数据
-            this.setFakeLayout();
+            //this.setFakeLayout();
+            this.setFakeNeteaseLayout();
             return;
         }
 

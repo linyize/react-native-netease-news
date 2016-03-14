@@ -44,12 +44,13 @@ var HeadlineCell = React.createClass({
     _textStyles() {
         return {
             position: 'absolute',
-            textAlign: 'center',
+            textAlign: 'left',
             backgroundColor: 'rgba(52,52,52,0.6)',
             color: 'white',
             bottom: 0,
             left: 0,
             paddingTop: 4,
+            paddingLeft: 10,
             width: this.state.width,
             height: 25
         };

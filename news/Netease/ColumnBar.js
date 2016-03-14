@@ -32,7 +32,7 @@ var ColumnBar = React.createClass({
 var styles = StyleSheet.create({
   container: {
   	flexDirection: 'row',
-    backgroundColor: 'lightgray',
+    backgroundColor: '#F6F6F6',
     height: 30
   },
   button: {

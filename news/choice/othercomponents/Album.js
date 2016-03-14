@@ -61,7 +61,7 @@ var Album = React.createClass({
         return {
             position: 'absolute',
             flexDirection: 'column',
-            backgroundColor: 'lightgray',
+            backgroundColor: '#F6F6F6',
             top: 0,
             left: 0,
             width: this.state.width,
