@@ -7,7 +7,9 @@ var Column = require('../choice/Column');
 
 var Bar = React.createClass({
     render(){
-        return <Column style={styles.container}></Column>;
+        return <View style={styles.container}>
+                    <Column />
+                </View>;
     }
 });
 

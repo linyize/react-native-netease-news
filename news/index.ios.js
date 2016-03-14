@@ -29,7 +29,7 @@ class NeteaseNews extends React.Component {
 
     renderNewsLeftButton() {
         return <TouchableOpacity onPress={Actions.article}>
-                  <Image style={styles.navbarRightButton} source={require('./image/top_navi_bell_normal.png')}></Image>
+                  <Image style={styles.navbarLeftButton} source={require('./image/top_navi_bell_normal.png')}></Image>
                 </TouchableOpacity>;
     }
 
@@ -79,8 +79,13 @@ var styles = StyleSheet.create({
   navbarTitle: {
     marginTop: 10
   },
+  navbarLeftButton: {
+    marginTop: 10,
+    marginLeft: 10
+  },
   navbarRightButton: {
-    marginTop: 10
+    marginTop: 10,
+    marginRight: 10
   }
 });
 
