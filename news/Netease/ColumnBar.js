@@ -4,37 +4,38 @@ var React = require('react-native');
 var { Text, View, Image, StyleSheet, TouchableOpacity } = React;
 var { Actions } = require('react-native-router-flux');
 
+
+var ColumnBarButton = React.createClass({
+    propTypes: {
+        selected: React.PropTypes.bool,
+        index: React.PropTypes.number,
+        onPress: React.PropTypes.func
+    },
+
+    render() {
+      var selected = this.props.selected;
+      var index = this.props.index;
+      return <TouchableOpacity style={styles.button} onPress={()=>this.props.onPress(index)}>
+                <Text style={selected ? styles.buttonTitleHighlight : styles.buttonTitle}>{this.props.title}</Text>
+              </TouchableOpacity>;
+    }
+});
+
 var ColumnBar = React.createClass({
     propTypes: {
         onChangeTabs: React.PropTypes.func
-    },
-
-    onPressTab(index) {
-      this.props.onChangeTabs(index);
     },
 
     render(){
 
       var index = this.props.index;
         return <View style={styles.container}>
-        			<TouchableOpacity style={styles.button} onPress={()=>this.onPressTab(0)}>
-        				<Text style={index == 0 ? styles.buttonTitleHighlight : styles.buttonTitle}>头条</Text>
-        			</TouchableOpacity>
-        			<TouchableOpacity style={styles.button} onPress={()=>this.onPressTab(1)}>
-        				<Text style={index == 1 ? styles.buttonTitleHighlight : styles.buttonTitle}>体育</Text>
-        			</TouchableOpacity>
-        			<TouchableOpacity style={styles.button} onPress={()=>this.onPressTab(2)}>
-        				<Text style={index == 2 ? styles.buttonTitleHighlight : styles.buttonTitle}>财经</Text>
-        			</TouchableOpacity>
-        			<TouchableOpacity style={styles.button} onPress={()=>this.onPressTab(3)}>
-        				<Text style={index == 3 ? styles.buttonTitleHighlight : styles.buttonTitle}>汽车</Text>
-        			</TouchableOpacity>
-        			<TouchableOpacity style={styles.button} onPress={()=>this.onPressTab(4)}>
-        				<Text style={index == 4 ? styles.buttonTitleHighlight : styles.buttonTitle}>热点</Text>
-        			</TouchableOpacity>
-        			<TouchableOpacity style={styles.button} onPress={()=>this.onPressTab(5)}>
-        				<Text style={index == 5 ? styles.buttonTitleHighlight : styles.buttonTitle}>订阅</Text>
-        			</TouchableOpacity>
+        			<ColumnBarButton index={0} onPress={this.props.onChangeTabs} selected={index == 0} title='头条' />
+              <ColumnBarButton index={1} onPress={this.props.onChangeTabs} selected={index == 1} title='体育' />
+              <ColumnBarButton index={2} onPress={this.props.onChangeTabs} selected={index == 2} title='财经' />
+              <ColumnBarButton index={3} onPress={this.props.onChangeTabs} selected={index == 3} title='汽车' />
+              <ColumnBarButton index={4} onPress={this.props.onChangeTabs} selected={index == 4} title='热点' />
+              <ColumnBarButton index={5} onPress={this.props.onChangeTabs} selected={index == 5} title='订阅' />
                 </View>;
     }
 });
